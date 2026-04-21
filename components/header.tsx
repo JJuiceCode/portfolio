@@ -4,9 +4,9 @@ import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
 const nav = [
-  { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#work", label: "Work" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -16,8 +16,8 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         <a
-          href="#"
-          className="text-sm font-semibold tracking-tight text-[var(--foreground)] transition hover:text-violet-600 dark:hover:text-violet-400"
+          href="/"
+          className="text-sm font-semibold tracking-tight text-foreground transition hover:text-violet-600 dark:hover:text-violet-400"
         >
           Portfolio
         </a>
