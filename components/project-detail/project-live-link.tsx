@@ -15,7 +15,7 @@ export function ProjectLiveLink({ href, label = "라이브 프로젝트 보기" 
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-violet-600 px-7 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition hover:bg-violet-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500 dark:bg-violet-500 dark:hover:bg-violet-400 dark:shadow-violet-500/20"
+          className="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-accent px-7 text-sm font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {label}
           <ExternalLinkIcon className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
