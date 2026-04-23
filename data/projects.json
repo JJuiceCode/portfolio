@@ -1,0 +1,123 @@
+{
+  "projects": [
+    {
+      "slug": "ecommerce-dashboard",
+      "title": "E‑commerce Dashboard",
+      "summary": "판매 지표와 재고를 한 화면에서 관리하는 관리자 대시보드.",
+      "tags": ["Next.js", "Charts"],
+      "heroImage": {
+        "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80",
+        "alt": "데이터 대시보드와 차트가 보이는 모니터 화면"
+      },
+      "liveUrl": "https://example.com/ecommerce-dashboard",
+      "areas": [
+        {
+          "id": "overview",
+          "title": "Overview & KPI 위젯",
+          "techStack": ["Next.js", "React Server Components", "Recharts", "Tailwind CSS"],
+          "details": [
+            "일·주·월 단위 매출·전환·이탈 KPI를 카드 그리드로 구성하고, 서버에서 집계된 지표를 스트리밍해 초기 페인트를 줄였습니다.",
+            "차트는 반응형 브레이크포인트별로 tick·legend 밀도를 조정해 모바일에서도 읽기 쉽게 유지했습니다."
+          ]
+        },
+        {
+          "id": "inventory",
+          "title": "재고 테이블 & 필터",
+          "techStack": ["TanStack Table", "URL Search Params", "Zod"],
+          "details": [
+            "정렬·필터·페이지네이션 상태를 URL에 동기화해 공유 가능한 뷰를 만들고, 새로고침에도 상태가 유지되도록 했습니다.",
+            "대량 데이터는 가상 스크롤과 지연 로딩을 적용해 스크롤 성능을 안정화했습니다."
+          ]
+        },
+        {
+          "id": "footer-shell",
+          "title": "앱 셸 & 푸터",
+          "techStack": ["Next.js Layout", "Design Tokens", "Dark mode"],
+          "details": [
+            "관리자 영역 공통 레이아웃과 푸터 내비게이션을 분리해 라우트 전환 시 레이아웃 페인트를 최소화했습니다.",
+            "라이트/다크 토큰을 CSS 변수로 통일해 테마 전환 시 깜빡임 없이 일관된 대비를 유지했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "design-system",
+      "title": "Design System",
+      "summary": "팀 공용 컴포넌트 라이브러리와 문서 사이트.",
+      "tags": ["Storybook", "Tokens"],
+      "heroImage": {
+        "src": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80",
+        "alt": "UI 컴포넌트 스케치와 디자인 도구"
+      },
+      "liveUrl": "https://example.com/design-system",
+      "areas": [
+        {
+          "id": "tokens",
+          "title": "Design Tokens",
+          "techStack": ["Style Dictionary", "CSS Variables", "Figma Tokens"],
+          "details": [
+            "색·타이포·스페이싱 토큰을 단일 소스에서 빌드해 웹·문서·IDE 스니펫까지 동일한 스케일을 공유했습니다.",
+            "시맨틱 토큰 레이어를 두어 브랜드 팔레트 변경 시 컴포넌트 수정 범위를 최소화했습니다."
+          ]
+        },
+        {
+          "id": "storybook",
+          "title": "문서 사이트 & Storybook",
+          "techStack": ["Storybook 8", "MDX", "A11y addon"],
+          "details": [
+            "각 컴포넌트에 사용 가이드·접근성 체크리스트·버전 노트를 MDX로 묶어 온보딩 시간을 줄였습니다.",
+            "스토리를 상태 매트릭스로 구성해 variant 조합을 한눈에 검증할 수 있게 했습니다."
+          ]
+        },
+        {
+          "id": "components",
+          "title": "핵심 컴포넌트 세트",
+          "techStack": ["React", "Radix primitives", "Tailwind"],
+          "details": [
+            "Button, Input, Dialog 등 기본 컴포넌트를 합성 패턴으로 설계해 확장성과 API 일관성을 맞췄습니다.",
+            "키보드 포커스 링·라이브 리전 등 접근성 속성을 기본값으로 포함했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mobile-first-landing",
+      "title": "Mobile-first Landing",
+      "summary": "성능과 SEO를 고려한 랜딩 페이지 및 A/B 테스트.",
+      "tags": ["Performance", "SEO"],
+      "heroImage": {
+        "src": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80",
+        "alt": "스마트폰으로 웹사이트를 보는 모습"
+      },
+      "liveUrl": "https://example.com/mobile-landing",
+      "areas": [
+        {
+          "id": "hero-landing",
+          "title": "히어로 & 스토리 섹션",
+          "techStack": ["Next.js", "next/image", "SVG"],
+          "details": [
+            "LCP 요소를 히어로 이미지로 고정하고 priority·적절한 sizes로 모바일에서 과도한 바이트를 줄였습니다.",
+            "스크롤 기반 인터섹션은 prefers-reduced-motion을 존중해 애니메이션을 단순화했습니다."
+          ]
+        },
+        {
+          "id": "review",
+          "title": "리뷰 섹션",
+          "techStack": ["JSON-LD", "Carousel pattern", "CSS scroll-snap"],
+          "details": [
+            "리뷰 카드에 구조화 데이터를 추가해 검색 결과 리치 스니펫 가능성을 높였습니다.",
+            "모바일 캐러셀은 네이티브 스크롤 스냅으로 구현해 JS 의존을 줄였습니다."
+          ]
+        },
+        {
+          "id": "footer",
+          "title": "푸터 & CTA",
+          "techStack": ["Semantic HTML", "Analytics hooks"],
+          "details": [
+            "푸터 링크 그룹을 nav/landmark로 구획하고, 주요 CTA에 이벤트 훅을 분리해 A/B 실험 스위치를 안전하게 꽂을 수 있게 했습니다."
+          ]
+        }
+      ]
+    }
+  ]
+}
