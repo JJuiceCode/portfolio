@@ -15,7 +15,7 @@ export function TechnicalAccordion({ areas }: TechnicalAccordionProps) {
     <section className="border-t border-border bg-surface/40 px-4 py-16 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
             Technical deep-dive
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
@@ -44,12 +44,12 @@ export function TechnicalAccordion({ areas }: TechnicalAccordionProps) {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setOpenId(isOpen ? null : area.id)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-foreground transition hover:bg-accent/5 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-violet-500 sm:px-6 sm:py-5"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-foreground transition hover:bg-accent/5 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-accent sm:px-6 sm:py-5"
                   >
                     <span className="min-w-0">{area.title}</span>
                     <span
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-surface text-muted transition ${
-                        isOpen ? "rotate-180 text-violet-600 dark:text-violet-400" : ""
+                        isOpen ? "rotate-180 text-accent" : ""
                       }`}
                       aria-hidden
                     >
@@ -87,7 +87,7 @@ export function TechnicalAccordion({ areas }: TechnicalAccordionProps) {
                         </p>
                         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-muted">
                           {area.details.map((paragraph, i) => (
-                            <li key={i} className="relative pl-4 before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-violet-500/80 dark:before:bg-violet-400/80">
+                            <li key={i} className="relative pl-4 before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-accent/80">
                               {paragraph}
                             </li>
                           ))}

@@ -22,7 +22,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="주요 메뉴">
           {nav.map(item => (
-            <a key={item.href} href={item.href} className="text-sm text-muted transition hover:text-violet-600 dark:hover:text-violet-400">
+            <a key={item.href} href={item.href} className="text-sm text-muted transition hover:text-accent">
               {item.label}
             </a>
           ))}

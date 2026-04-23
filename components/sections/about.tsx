@@ -3,7 +3,7 @@ export function About() {
     <section id="about" className="scroll-mt-24 border-t border-border px-4 py-20 sm:px-6">
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-[1fr_1.2fr] md:gap-16">
         <div>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">About</p>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">About</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">소개</h2>
         </div>
         <div className="space-y-4 text-muted">
