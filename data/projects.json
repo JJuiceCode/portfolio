@@ -1,15 +1,15 @@
 {
   "projects": [
     {
-      "slug": "ecommerce-dashboard",
-      "title": "E‑commerce Dashboard",
-      "summary": "판매 지표와 재고를 한 화면에서 관리하는 관리자 대시보드.",
+      "slug": "ecommerce-migration",
+      "title": "자체 쇼핑몰 전환 및 구축",
+      "summary": "SaaS 기반 서비스(카페24)를 자체 플랫폼으로 전환하는 프로젝트 경험",
       "tags": ["Next.js", "Charts"],
       "heroImage": {
-        "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80",
+        "src": "/hero/dx_main.jpg",
         "alt": "데이터 대시보드와 차트가 보이는 모니터 화면"
       },
-      "liveUrl": "https://example.com/ecommerce-dashboard",
+      "liveUrl": "https://www.discovery-expedition.com/",
       "areas": [
         {
           "id": "overview",
@@ -113,9 +113,7 @@
           "id": "footer",
           "title": "푸터 & CTA",
           "techStack": ["Semantic HTML", "Analytics hooks"],
-          "details": [
-            "푸터 링크 그룹을 nav/landmark로 구획하고, 주요 CTA에 이벤트 훅을 분리해 A/B 실험 스위치를 안전하게 꽂을 수 있게 했습니다."
-          ]
+          "details": ["푸터 링크 그룹을 nav/landmark로 구획하고, 주요 CTA에 이벤트 훅을 분리해 A/B 실험 스위치를 안전하게 꽂을 수 있게 했습니다."]
         }
       ]
     }

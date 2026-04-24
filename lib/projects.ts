@@ -26,20 +26,21 @@ export function getAllProjects(): ProjectDetail[] {
 }
 
 export function getProjectBySlug(slug: string): ProjectDetail | undefined {
-  return projects.find((p) => p.slug === slug);
+  return projects.find(p => p.slug === slug);
 }
 
 export function getAllProjectSlugs(): string[] {
-  return projects.map((p) => p.slug);
+  return projects.map(p => p.slug);
 }
 
-export type ProjectListItem = Pick<ProjectDetail, "slug" | "title" | "summary" | "tags">;
+export type ProjectListItem = Pick<ProjectDetail, "slug" | "title" | "summary" | "tags" | "heroImage">;
 
 export function getProjectsForListing(): ProjectListItem[] {
-  return projects.map(({ slug, title, summary, tags }) => ({
+  return projects.map(({ slug, title, summary, tags, heroImage }) => ({
     slug,
     title,
     summary,
     tags,
+    heroImage,
   }));
 }
