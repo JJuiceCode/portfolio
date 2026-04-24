@@ -4,12 +4,14 @@
       "slug": "ecommerce-migration",
       "title": "자체 쇼핑몰 전환 및 구축",
       "summary": "SaaS 기반 서비스(카페24)를 자체 플랫폼으로 전환하는 프로젝트 경험",
-      "tags": ["Next.js", "Charts"],
+
+      "tags": ["React", "Next.js", "PagesRouter", "TypeScript", "Emotion", "Redux", "SWR", "Axios", "JWT", "ContextAPI", "CustomHook"],
       "heroImage": {
         "src": "/hero/dx_main.jpg",
-        "alt": "데이터 대시보드와 차트가 보이는 모니터 화면"
+        "alt": "discovery-expedition 메인 페이지"
       },
-      "liveUrl": "https://www.discovery-expedition.com/",
+      "linkLabel": "Discovery Expedition 바로가기",
+      "linkUrl": "https://www.discovery-expedition.com/",
       "areas": [
         {
           "id": "overview",
@@ -49,7 +51,8 @@
         "src": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80",
         "alt": "UI 컴포넌트 스케치와 디자인 도구"
       },
-      "liveUrl": "https://example.com/design-system",
+      "linkLabel": "배포 프로젝트 보기",
+      "linkUrl": "https://example.com/design-system",
       "areas": [
         {
           "id": "tokens",
@@ -89,7 +92,8 @@
         "src": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80",
         "alt": "스마트폰으로 웹사이트를 보는 모습"
       },
-      "liveUrl": "https://example.com/mobile-landing",
+      "linkLabel": "배포 프로젝트 보기",
+      "linkUrl": "https://example.com/mobile-landing",
       "areas": [
         {
           "id": "hero-landing",

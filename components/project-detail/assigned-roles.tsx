@@ -10,9 +10,13 @@ export function AssignedRoles({ areas }: AssignedRolesProps) {
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">POISITON</p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">이번 프로젝트에서 맡은 부분</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">프로젝트 담당 영역 - ProductDetailPage (PDP)</h2>
           <p className="mt-3 text-muted">
-            화면 단위로 역할을 나누어 기여했습니다. 아래 아코디언에서 각 영역의 기술 스택과 구현 히스토리를 펼쳐 볼 수 있습니다.
+            상품상세(PDP) 페이지의 핵심 컴포넌트와 상태 흐름을 설계 및 구현하여, 복잡한 상품 데이터 구조와 다양한 UI 요구사항을 안정적으로
+            처리했습니다.
+          </p>
+          <p className="mt-2 text-muted">
+            Figma 기반 디자인을 반영한 반응형 UI를 구현하고, 사용자 인터랙션과 API 연동을 고려한 컴포넌트 아키텍처를 구축했습니다.
           </p>
         </div>
 

@@ -13,7 +13,8 @@ export type ProjectDetail = {
   summary: string;
   tags: string[];
   heroImage: { src: string; alt: string };
-  liveUrl: string;
+  linkLabel: string;
+  linkUrl: string;
   areas: ProjectArea[];
 };
 

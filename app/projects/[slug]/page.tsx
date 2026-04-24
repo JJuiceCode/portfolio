@@ -13,7 +13,7 @@ type PageProps = {
 };
 
 export async function generateStaticParams() {
-  return getAllProjectSlugs().map((slug) => ({ slug }));
+  return getAllProjectSlugs().map(slug => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -43,7 +43,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       <Header />
       <main className="min-h-screen bg-background">
         <ProjectHero title={project.title} summary={project.summary} tags={project.tags} image={project.heroImage} />
-        <ProjectLiveLink href={project.liveUrl} />
+        <ProjectLiveLink href={project.linkUrl} linkLabel={project.linkLabel} />
         <AssignedRoles areas={project.areas} />
         <TechnicalAccordion areas={project.areas} />
       </main>

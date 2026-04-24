@@ -20,11 +20,11 @@ export function ProjectHero({ title, summary, tags, image }: ProjectHeroProps) {
         <div className="mt-8 grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
           <div className="max-w-xl">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Project</p>
-            <h1 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl lg:text-4xl">{title}</h1>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-3xl lg:text-4xl">{title}</h1>
             <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base">{summary}</p>
             <ul className="mt-4 flex flex-wrap gap-2">
               {tags.map(tag => (
-                <li key={tag} className="text-sm text-accent/90">
+                <li key={tag} className="text-sm text-accent/90 border border-border bg-surface/50 rounded-lg px-2 py-1">
                   {tag}
                 </li>
               ))}
