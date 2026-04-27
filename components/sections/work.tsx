@@ -7,10 +7,10 @@ export function Work() {
   return (
     <section id="work" className="scroll-mt-24 border-t border-border px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-12 max-w-xl">
+        <div className="mb-12 max-w-xl text-center sm:text-left">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Selected work</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">프로젝트</h2>
-          <p className="mt-3 text-muted">대표 작업물입니다. 카드를 눌러 상세 페이지로 이동하세요.</p>
+          <p className="mt-3 text-muted">카드를 눌러 프로젝트 상세 페이지로 이동하세요.</p>
         </div>
 
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
