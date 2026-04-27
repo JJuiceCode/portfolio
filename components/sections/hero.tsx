@@ -9,10 +9,10 @@ export function Hero() {
         <div className="absolute -right-1/4 bottom-0 h-[320px] w-[320px] rounded-full bg-fuchsia-500/10 blur-3xl dark:bg-fuchsia-600/15" />
       </div>
 
-      <div className="mx-auto grid max-w-5xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.75fr)] lg:gap-10">
+      <div className="mx-auto grid max-w-5xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.75fr)] lg:gap-10 text-center sm:text-left">
         <div>
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent">Frontend Engineer</p>
-          <h1 className="max-w-3xl text-3xl font-semibold text-foreground sm:text-3xl md:text-4xl">
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent  text-center sm:text-left">Frontend Engineer</p>
+          <h1 className="break-keep max-w-3xl text-3xl font-semibold text-foreground sm:text-3xl md:text-4xl  ">
             복잡한 이커머스 구조를 설계하고 <span className="text-accent">문제를 해결해 사용자 경험으로</span> 연결합니다.
           </h1>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
