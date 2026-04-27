@@ -17,7 +17,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-sm font-semibold tracking-tight text-foreground transition hover:text-accent">
-          Portfolio
+          JJuiceCode
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="주요 메뉴">

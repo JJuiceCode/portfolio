@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GithubIcon } from "@/components/icons/github-icon";
 
 export function Hero() {
   return (
@@ -8,7 +9,7 @@ export function Hero() {
         <div className="absolute -right-1/4 bottom-0 h-[320px] w-[320px] rounded-full bg-fuchsia-500/10 blur-3xl dark:bg-fuchsia-600/15" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.75fr)] lg:gap-10">
+      <div className="mx-auto grid max-w-5xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.75fr)] lg:gap-10">
         <div>
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent">Creative Developer</p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
@@ -30,8 +31,18 @@ export function Hero() {
               프로젝트 보기
             </a>
             <a
+              href="https://github.com/JJuiceCode"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub 프로필 열기"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-border bg-surface px-8 text-sm font-medium text-foreground transition hover:border-accent/50 hover:bg-accent-soft"
+            >
+              <GithubIcon className="h-4 w-4" />
+              GitHub
+            </a>
+            <a
               href="#contact"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-sm font-medium text-foreground transition hover:border-accent/50 hover:bg-accent-soft"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-sm font-medium bg-surface text-foreground transition hover:border-accent/50 hover:bg-accent-soft"
             >
               연락하기
             </a>

@@ -1,10 +1,10 @@
-import { ExternalLinkIcon } from "@/components/external-link-icon";
+import { ExternalLinkIcon } from "@/components/icons/external-link-icon";
 
 export function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 border-t border-border px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-5xl">
-        <div className="rounded-3xl border border-border bg-accent-soft px-6 py-12 sm:px-10 sm:py-16">
+        <div className="rounded-3xl border border-border bg-surface px-6 py-12 sm:px-10 sm:py-16">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Contact</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">함께 일하고 싶으신가요?</h2>
           <p className="mt-3 max-w-lg text-muted">프로젝트 제안이나 협업 문의는 이메일로 보내 주세요.</p>

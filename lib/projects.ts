@@ -14,8 +14,8 @@ export type ProjectDetail = {
   summary: string;
   tags: string[];
   heroImage: { src: string; alt: string };
-  linkLabel: string;
-  linkUrl: string;
+  linkLabel: string[];
+  linkUrls: string[];
   positionTitle: string;
   positionDescription: string[];
   areas: ProjectArea[];
