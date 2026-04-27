@@ -44,7 +44,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       <main className="min-h-screen bg-background">
         <ProjectHero title={project.title} summary={project.summary} tags={project.tags} image={project.heroImage} />
         <ProjectLiveLink href={project.linkUrl} linkLabel={project.linkLabel} />
-        <AssignedRoles areas={project.areas} />
+        <AssignedRoles areas={project.areas} positionTitle={project.positionTitle} positionDescription={project.positionDescription} />
         <TechnicalAccordion areas={project.areas} />
       </main>
       <Footer />

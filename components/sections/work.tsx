@@ -21,7 +21,7 @@ export function Work() {
                 className="block h-full rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <article className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 transition hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 dark:hover:shadow-accent/10">
-                  <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-xl">
+                  <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800">
                     <Image
                       src={p.heroImage.src}
                       alt={p.heroImage.alt}
@@ -32,7 +32,6 @@ export function Work() {
                     />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground group-hover:text-accent">{p.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{p.summary}</p>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {p.tags.map(t => (
                       <li key={t} className="text-xs text-accent/90">

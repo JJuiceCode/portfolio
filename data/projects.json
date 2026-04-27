@@ -2,9 +2,8 @@
   "projects": [
     {
       "slug": "ecommerce-migration",
-      "title": "자체 쇼핑몰 전환 및 구축",
-      "summary": "SaaS 기반 서비스(카페24)를 자체 플랫폼으로 전환하는 프로젝트 경험",
-
+      "title": "Discovery Expedition 자체 쇼핑몰 전환 및 구축",
+      "summary": "F&F 웹플랫폼팀 FE지원 - SaaS 기반 서비스(카페24)를 자체 플랫폼으로 전환",
       "tags": ["React", "Next.js", "PagesRouter", "TypeScript", "Emotion", "Redux", "SWR", "Axios", "JWT", "ContextAPI", "CustomHook"],
       "heroImage": {
         "src": "/hero/dx_main.jpg",
@@ -12,112 +11,171 @@
       },
       "linkLabel": "Discovery Expedition 바로가기",
       "linkUrl": "https://www.discovery-expedition.com/",
+      "positionTitle": "ProductDetailPage (PDP)",
+      "positionDescription": [
+        "상품상세(PDP) 페이지의 핵심 컴포넌트와 상태 흐름을 설계 및 구현하여, 복잡한 상품 데이터 구조와 다양한 UI 요구사항을 안정적으로 처리했습니다.",
+        "Figma 기반 디자인을 반영한 반응형 UI를 구현하고, 사용자 인터랙션과 API 연동을 고려한 컴포넌트 아키텍처를 구축했습니다."
+      ],
       "areas": [
         {
-          "id": "overview",
-          "title": "Overview & KPI 위젯",
-          "techStack": ["Next.js", "React Server Components", "Recharts", "Tailwind CSS"],
+          "id": "state-architecture",
+          "title": "상태관리 아키텍처 설계",
+          "subText": "도메인·서버·액션 상태를 분리해 책임이 명확한 PDP 상태 구조를 설계",
+          "techStack": ["React Hooks", "React Context", "Redux Toolkit", "SWR", "React Hook Form"],
           "details": [
-            "일·주·월 단위 매출·전환·이탈 KPI를 카드 그리드로 구성하고, 서버에서 집계된 지표를 스트리밍해 초기 페인트를 줄였습니다.",
-            "차트는 반응형 브레이크포인트별로 tick·legend 밀도를 조정해 모바일에서도 읽기 쉽게 유지했습니다."
+            "상품상세 진입 시 페이지 단위 상태 컨테이너를 구성하여, 여러 컴포넌트가 공통 상태를 공유하도록 설계했습니다.",
+            "상품 옵션 선택, 수량, 구매 타입 등 구매 흐름에 영향을 주는 상태를 별도 계층으로 관리하여 여러 UI 영역에서 일관되게 사용하도록 했습니다.",
+            "상품 상세 메인 영역에서는 모달, 드로어, 스티키 UI, CTA 노출 등 다양한 UI 상태를 통합적으로 제어했습니다.",
+            "장바구니/구매 관련 액션은 전역 상태 관리 계층에서 처리하고, 조회성 데이터는 캐싱 기반으로 필요한 컴포넌트에서 직접 가져오도록 분리했습니다.",
+            "옵션 선택 상태가 여러 컴포넌트에 걸쳐 필요해지면서 props 기반 구조의 한계를 경험했고, 페이지 범위의 상태 공유 구조로 개선했습니다.",
+            "백엔드 API 구조에 맞춰 주문 파라미터를 구성하고, 구매 정책(혼합 구매 제한, 로그인 복귀 등)을 상태 흐름에 반영했습니다."
           ]
         },
         {
-          "id": "inventory",
-          "title": "재고 테이블 & 필터",
-          "techStack": ["TanStack Table", "URL Search Params", "Zod"],
+          "id": "layout-system",
+          "title": "Slot 기반 레이아웃 시스템 구축",
+          "subText": "반응형 환경에 대응하는 모듈형 레이아웃 구조로 확장 가능한 UI를 구현",
+          "techStack": ["MUI", "CSS-in-js", "ResizeObserver", "useMediaQuery", "Swiper"],
           "details": [
-            "정렬·필터·페이지네이션 상태를 URL에 동기화해 공유 가능한 뷰를 만들고, 새로고침에도 상태가 유지되도록 했습니다.",
-            "대량 데이터는 가상 스크롤과 지연 로딩을 적용해 스크롤 성능을 안정화했습니다."
+            " 디바이스에 따라 레이아웃 구성이 달라지는 요구사항을 설정 기반으로 분리하여 관리했습니다.",
+            "MUI 컴포넌트를 활용해 모듈화된 레이아웃 시스템을 구축했습니다. 반응형 환경에 따라 자동으로 크기와 레이아웃을 조정하도록 useMediaQuery를 활용했습니다.",
+            "ResizeObserver를 사용해 뷰포트 크기 변화에 따라 동적으로 UI를 조정하고, CSS-in-js로 스타일을 동적으로 생성하여 유지보수성을 높였습니다.",
+            "CTA, 모달, 드로어 등 인터랙션 UI를 레이아웃 본문과 분리하여 구조를 단순화했습니다.",
+            "화면 크기 및 요소 위치 정보를 기반으로 UI 배치를 동적으로 계산하는 로직을 구성했습니다."
           ]
         },
         {
-          "id": "footer-shell",
-          "title": "앱 셸 & 푸터",
-          "techStack": ["Next.js Layout", "Design Tokens", "Dark mode"],
+          "id": "interaction-design",
+          "title": "구매 전환 중심 인터랙션 구현",
+          "subText": "옵션 선택부터 구매까지 이어지는 흐름을 설계하고, 전환 중심 인터랙션을 구현",
+          "techStack": ["ScrollAPI", "Modal/Drawer UI", "Storage API", "Error Handling"],
           "details": [
-            "관리자 영역 공통 레이아웃과 푸터 내비게이션을 분리해 라우트 전환 시 레이아웃 페인트를 최소화했습니다.",
-            "라이트/다크 토큰을 CSS 변수로 통일해 테마 전환 시 깜빡임 없이 일관된 대비를 유지했습니다."
+            "ScrollAPI를 사용해 스크롤 위치와 뷰포트 변화에 따라 동적으로 UI를 조정하고, 스크롤 위치를 저장하여 페이지 이동 시 유지되도록 했습니다.",
+            "Modal/Drawer UI를 구현하여 옵션 선택, 구매 타입 변경, 장바구니 뷰 등 다양한 인터랙션 UI를 구현했습니다.",
+            "Storage API를 사용해 옵션 선택 상태를 브라우저에 저장하여 페이지 새로고침 시 유지되도록 했습니다.",
+            "모바일과 데스크톱 환경에 따라 다른 구매 진입 방식을 제공하고, 스크롤 상태에 따라 CTA 노출을 동적으로 제어했습니다."
           ]
         }
       ]
     },
     {
-      "slug": "design-system",
-      "title": "Design System",
-      "summary": "팀 공용 컴포넌트 라이브러리와 문서 사이트.",
-      "tags": ["Storybook", "Tokens"],
+      "slug": "mlb-multibrand-expansion",
+      "title": "MLB 쇼핑몰 구축 (멀티 브랜드 확장)",
+      "summary": "기존 Discovery 기반 커머스 플랫폼을 Monorepo 환경에서 확장하여 MLB 브랜드 전용 UI 및 기능을 구현",
+      "tags": ["Monorepo", "Turborepo", "Next.js", "React", "TypeScript", "Redux", "SWR", "Axios", "GTM", "Sentry"],
       "heroImage": {
-        "src": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80",
-        "alt": "UI 컴포넌트 스케치와 디자인 도구"
+        "src": "/hero/mlb_main.jpg",
+        "alt": "MLB 메인 페이지"
       },
-      "linkLabel": "배포 프로젝트 보기",
-      "linkUrl": "https://example.com/design-system",
+      "linkLabel": "MLB 바로가기",
+      "linkUrl": "https://www.mlb-korea.com/",
+      "positionTitle": "ProductDetailPage (PDP)",
+      "positionDescription": [
+        "기존 커머스 플랫폼 아키텍처를 기반으로 MLB 브랜드 요구사항에 맞는 상품상세(PDP) UI 및 기능을 확장 구현했습니다.",
+        "멀티 브랜드 구조에서 공통 로직을 재사용하면서도 브랜드별 UI/기능 차이를 분리하여 유지보수성과 확장성을 고려한 구조를 설계했습니다."
+      ],
       "areas": [
         {
-          "id": "tokens",
-          "title": "Design Tokens",
-          "techStack": ["Style Dictionary", "CSS Variables", "Figma Tokens"],
+          "id": "multibrand-architecture",
+          "title": "멀티 브랜드 아키텍처 확장",
+          "subText": "기존 플랫폼을 기반으로 브랜드별 분기 구조를 설계",
+          "techStack": ["Monorepo", "Turborepo", "Next.js", "React"],
           "details": [
-            "색·타이포·스페이싱 토큰을 단일 소스에서 빌드해 웹·문서·IDE 스니펫까지 동일한 스케일을 공유했습니다.",
-            "시맨틱 토큰 레이어를 두어 브랜드 팔레트 변경 시 컴포넌트 수정 범위를 최소화했습니다."
+            "기존 Discovery 쇼핑몰 코드를 기반으로 Monorepo 구조에서 MLB 브랜드를 확장 구현했습니다.",
+            "공통 컴포넌트와 브랜드 전용 UI를 분리하여 코드 재사용성과 유지보수성을 높였습니다.",
+            "브랜드별 요구사항에 따라 UI 및 기능을 분기 처리하면서도 공통 로직은 일관되게 유지했습니다.",
+            "멀티 브랜드 구조에서 확장 시 발생할 수 있는 중복 코드 문제를 최소화하도록 아키텍처를 구성했습니다."
           ]
         },
         {
-          "id": "storybook",
-          "title": "문서 사이트 & Storybook",
-          "techStack": ["Storybook 8", "MDX", "A11y addon"],
+          "id": "review-integration",
+          "title": "3rd-party 리뷰 시스템 도입",
+          "subText": "Crema 리뷰 서비스 연동 및 UI 통합",
+          "techStack": ["3rd-party API", "SWR", "Axios"],
           "details": [
-            "각 컴포넌트에 사용 가이드·접근성 체크리스트·버전 노트를 MDX로 묶어 온보딩 시간을 줄였습니다.",
-            "스토리를 상태 매트릭스로 구성해 variant 조합을 한눈에 검증할 수 있게 했습니다."
+            "외부 리뷰 서비스(Crema)를 상품상세 페이지에 최초로 연동했습니다.",
+            "리뷰 데이터 조회 및 렌더링 구조를 설계하여 기존 PDP UI와 자연스럽게 통합했습니다.",
+            "서버 데이터와 UI 구조를 분리하여 리뷰 기능이 다른 영역에 영향을 주지 않도록 구성했습니다.",
+            "외부 API 연동 시 발생할 수 있는 데이터 지연 및 예외 상황을 고려해 안정적인 렌더링 구조를 구현했습니다."
           ]
         },
         {
-          "id": "components",
-          "title": "핵심 컴포넌트 세트",
-          "techStack": ["React", "Radix primitives", "Tailwind"],
+          "id": "tracking-and-monitoring",
+          "title": "트래킹 및 모니터링 시스템 구축",
+          "subText": "GTM 및 Sentry 기반 사용자 행동 추적과 에러 모니터링 적용",
+          "techStack": ["GTM", "Sentry"],
           "details": [
-            "Button, Input, Dialog 등 기본 컴포넌트를 합성 패턴으로 설계해 확장성과 API 일관성을 맞췄습니다.",
-            "키보드 포커스 링·라이브 리전 등 접근성 속성을 기본값으로 포함했습니다."
+            "Google Tag Manager를 통해 상품상세 페이지 주요 사용자 행동 이벤트를 트래킹하도록 구성했습니다.",
+            "사용자 인터랙션(조회, 클릭, 구매 등)을 기반으로 데이터 수집 구조를 설계했습니다.",
+            "Sentry를 도입하여 런타임 에러를 실시간으로 모니터링하고 빠르게 대응할 수 있는 환경을 구축했습니다.",
+            "운영 환경에서 발생하는 이슈를 추적하고 안정성을 개선하는 데 기여했습니다."
           ]
         }
       ]
     },
     {
-      "slug": "mobile-first-landing",
-      "title": "Mobile-first Landing",
-      "summary": "성능과 SEO를 고려한 랜딩 페이지 및 A/B 테스트.",
-      "tags": ["Performance", "SEO"],
+      "slug": "premium-brand-ui-rebuild",
+      "title": "프리미엄 브랜드 쇼핑몰 UI/UX 재구성 (Duvetica, Supra, Sergio Tacchini)",
+      "summary": "기존 커머스 플랫폼을 기반으로 Monorepo 환경에서 프리미엄 브랜드 전용 UI/UX를 설계하고, 인터랙션 및 데이터 기반 개선을 적용",
+      "tags": ["Monorepo", "Turborepo", "Next.js", "React", "TypeScript", "Redux", "SWR", "Axios", "Statsig", "GTM"],
       "heroImage": {
-        "src": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80",
-        "alt": "스마트폰으로 웹사이트를 보는 모습"
+        "src": "/hero/duvetica_main.jpg",
+        "alt": "프리미엄 브랜드 쇼핑몰 UI"
       },
-      "linkLabel": "배포 프로젝트 보기",
-      "linkUrl": "https://example.com/mobile-landing",
+      "linkLabel": "프로젝트 상세 보기",
+      "linkUrl": "",
+      "positionTitle": "ProductDetailPage (PDP)",
+      "positionDescription": [
+        "기존 커머스 플랫폼을 기반으로 프리미엄 브랜드(Duvetica, Supra, Sergio Tacchini)에 맞는 상품상세 UI/UX를 재설계하고 구현했습니다.",
+        "멀티 브랜드 구조에서 공통 로직을 유지하면서도 고급 브랜드에 적합한 인터랙션과 디자인 시스템을 확장 적용했습니다."
+      ],
       "areas": [
         {
-          "id": "hero-landing",
-          "title": "히어로 & 스토리 섹션",
-          "techStack": ["Next.js", "next/image", "SVG"],
+          "id": "multibrand-expansion",
+          "title": "멀티 브랜드 구조 확장",
+          "subText": "Monorepo 기반으로 브랜드별 UI 구조를 확장",
+          "techStack": ["Monorepo", "Turborepo", "Next.js", "React"],
           "details": [
-            "LCP 요소를 히어로 이미지로 고정하고 priority·적절한 sizes로 모바일에서 과도한 바이트를 줄였습니다.",
-            "스크롤 기반 인터섹션은 prefers-reduced-motion을 존중해 애니메이션을 단순화했습니다."
+            "기존 커머스 플랫폼을 기반으로 Monorepo 환경에서 프리미엄 브랜드를 확장 구현했습니다.",
+            "공통 컴포넌트와 브랜드 전용 UI를 분리하여 코드 재사용성과 유지보수성을 높였습니다.",
+            "브랜드별 디자인 및 기능 요구사항을 구조적으로 분리하여 확장 가능한 아키텍처를 구성했습니다."
           ]
         },
         {
-          "id": "review",
-          "title": "리뷰 섹션",
-          "techStack": ["JSON-LD", "Carousel pattern", "CSS scroll-snap"],
+          "id": "premium-ui-system",
+          "title": "프리미엄 UI/UX 재설계",
+          "subText": "고급 브랜드 경험을 위한 UI 구조 재구성",
+          "techStack": ["React", "Emotion", "MUI", "Custom Hook"],
           "details": [
-            "리뷰 카드에 구조화 데이터를 추가해 검색 결과 리치 스니펫 가능성을 높였습니다.",
-            "모바일 캐러셀은 네이티브 스크롤 스냅으로 구현해 JS 의존을 줄였습니다."
+            "기존 쇼핑몰 UI 구조를 기반으로 프리미엄 브랜드에 맞는 고급스러운 UI/UX를 재설계했습니다.",
+            "이미지 중심의 갤러리 구조와 콘텐츠 배치를 개선하여 시각적 몰입도를 높였습니다.",
+            "브랜드별 디자인 가이드를 반영하여 UI 컴포넌트를 재구성하고 스타일 시스템을 확장했습니다.",
+            "반응형 환경에서도 일관된 디자인 경험을 제공하도록 레이아웃을 개선했습니다."
           ]
         },
         {
-          "id": "footer",
-          "title": "푸터 & CTA",
-          "techStack": ["Semantic HTML", "Analytics hooks"],
-          "details": ["푸터 링크 그룹을 nav/landmark로 구획하고, 주요 CTA에 이벤트 훅을 분리해 A/B 실험 스위치를 안전하게 꽂을 수 있게 했습니다."]
+          "id": "interaction-enhancement",
+          "title": "인터랙션 고도화",
+          "subText": "스크롤 기반 UI 및 구매 인터랙션 개선",
+          "techStack": ["Scroll API", "IntersectionObserver", "ResizeObserver"],
+          "details": [
+            "스크롤 위치에 따라 동적으로 변화하는 UI 인터랙션을 구현했습니다.",
+            "특정 스크롤 구간에서 상품 정보를 포함한 Sticky CTA를 노출하여 구매 접근성을 개선했습니다.",
+            "이미지 갤러리 인터랙션을 개선하여 사용자 탐색 경험을 향상시켰습니다.",
+            "뷰포트 변화에 따라 UI가 자연스럽게 반응하도록 인터랙션 로직을 구성했습니다."
+          ]
+        },
+        {
+          "id": "experiment-tracking",
+          "title": "데이터 기반 개선 (A/B 테스트 & 트래킹)",
+          "subText": "Statsig 기반 실험 및 사용자 행동 데이터 수집",
+          "techStack": ["Statsig", "GTM"],
+          "details": [
+            "Statsig를 활용하여 UI 및 구매 인터랙션에 대한 A/B 테스트 환경을 구축했습니다.",
+            "사용자 행동 데이터를 기반으로 UI 개선 효과를 측정할 수 있도록 설계했습니다.",
+            "GTM을 통해 주요 사용자 행동 이벤트를 트래킹하고 데이터 분석 기반을 마련했습니다.",
+            "실제 사용자 데이터를 기반으로 지속적인 UI/UX 개선이 가능하도록 구조를 구성했습니다."
+          ]
         }
       ]
     }

@@ -3,6 +3,7 @@ import projectsFile from "@/data/projects.json";
 export type ProjectArea = {
   id: string;
   title: string;
+  subText: string;
   techStack: string[];
   details: string[];
 };
@@ -15,6 +16,8 @@ export type ProjectDetail = {
   heroImage: { src: string; alt: string };
   linkLabel: string;
   linkUrl: string;
+  positionTitle: string;
+  positionDescription: string[];
   areas: ProjectArea[];
 };
 
