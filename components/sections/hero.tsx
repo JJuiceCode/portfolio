@@ -11,18 +11,10 @@ export function Hero() {
 
       <div className="mx-auto grid max-w-5xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.75fr)] lg:gap-10">
         <div>
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent">Creative Developer</p>
-          <h1 className="max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            심플한 인터페이스로
-            <br />
-            <span className="bg-linear-to-r from-accent to-fuchsia-600 bg-clip-text text-transparent dark:from-accent dark:to-fuchsia-400">
-              명확한 경험
-            </span>
-            을 만듭니다.
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent">Frontend Engineer</p>
+          <h1 className="max-w-3xl text-3xl font-semibold text-foreground sm:text-3xl md:text-4xl">
+            복잡한 이커머스 구조를 설계하고 <span className="text-accent">문제를 해결해 사용자 경험으로</span> 연결합니다.
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            프론트엔드와 디자인 시스템에 관심이 많은 개발자입니다. 반응형 웹과 접근성을 중시합니다.
-          </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href="#work"
