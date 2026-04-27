@@ -7,12 +7,16 @@ export function About() {
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">소개</h2>
         </div>
         <div className="space-y-4 text-muted">
-          <p className="leading-relaxed">
-            사용자가 직관적으로 이해할 수 있는 UI와, 유지보수하기 쉬운 코드 구조를 목표로 합니다. Next.js, React, TypeScript를 주로 사용하며 디자인
-            토큰과 컴포넌트 단위 설계를 선호합니다.
-          </p>
+          <div className="space-y-2 leading-relaxed">
+            <p>이커머스 서비스 전반을 경험하며, 단순 UI 구현을 넘어 실제 운영과 연결되는 구조 설계를 중요하게 생각합니다.</p>
+            <p>
+              Next.js, React, TypeScript 기반으로 상태 관리와 컴포넌트 구조를 설계하고, 다양한 브랜드 환경에서도 확장 가능한 프론트엔드 개발을
+              지향합니다.
+            </p>
+            <p>또한 AI를 요구사항 정리, 구현 검토, 디버깅까지 활용하며, 최종 판단과 책임은 직접 가져가는 실무 중심 개발자로 성장하고 있습니다.</p>
+          </div>
           <ul className="flex flex-wrap gap-2 pt-2">
-            {["React", "Next.js", "TypeScript", "Tailwind CSS"].map(tag => (
+            {["React", "Next.js", "TypeScript", "Redux Toolkit", "SWR", "Axios", "Monorepo", "Tailwind CSS"].map(tag => (
               <li key={tag} className="rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-foreground">
                 {tag}
               </li>

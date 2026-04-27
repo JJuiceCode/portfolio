@@ -6,17 +6,46 @@ type ProjectHeroProps = {
   summary: string;
   tags: string[];
   image: { src: string; alt: string };
+  previousProject?: ProjectNavigationLink;
+  nextProject?: ProjectNavigationLink;
 };
 
-export function ProjectHero({ title, summary, tags, image }: ProjectHeroProps) {
+type ProjectNavigationLink = {
+  href: string;
+  label: string;
+};
+
+export function ProjectHero({ title, summary, tags, image, previousProject, nextProject }: ProjectHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-border px-4 sm:px-6">
       <div className="absolute inset-0 bg-linear-to-b from-background via-background/40 to-transparent dark:from-background dark:via-background/60" />
       <div className="relative mx-auto max-w-6xl pb-10 pt-24 sm:pb-14 sm:pt-28">
-        <Link href="/#work" className="inline-flex items-center gap-2 text-sm text-muted transition hover:text-accent">
-          <span aria-hidden>←</span>
-          모든 프로젝트
-        </Link>
+        <div className="grid min-h-9 grid-cols-2 items-start gap-3">
+          {previousProject ? (
+            <Link
+              href={previousProject.href}
+              className="inline-flex max-w-full items-center gap-2 justify-self-start rounded-full border border-border bg-surface/60 px-3 py-2 text-sm text-muted transition hover:border-accent/40 hover:text-accent"
+              aria-label={`이전 프로젝트: ${previousProject.label}`}
+            >
+              <span aria-hidden>←</span>
+              <span className="shrink-0">이전 프로젝트</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {nextProject ? (
+            <Link
+              href={nextProject.href}
+              className="inline-flex max-w-full items-center gap-2 justify-self-end rounded-full border border-border bg-surface/60 px-3 py-2 text-sm text-muted transition hover:border-accent/40 hover:text-accent"
+              aria-label={`다음 프로젝트: ${nextProject.label}`}
+            >
+              <span className="shrink-0">다음 프로젝트</span>
+              <span aria-hidden>→</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+        </div>
         <div className="mt-8 grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
           <div className="max-w-xl">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Project</p>
