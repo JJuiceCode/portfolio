@@ -124,7 +124,7 @@
       },
       "linkLabel": ["Duvetica 바로가기", "Supra 바로가기", "Sergio Tacchini 바로가기"],
       "linkUrls": ["https://www.duvetica.co.kr/", "https://www.supra-korea.com/", "https://www.sergiotacchini.co.kr/"],
-      "positionTitle": "ProductDetailPage (PDP)",
+      "positionTitle": "PDP, MailForm, Review",
       "positionDescription": [
         "기존 커머스 플랫폼을 기반으로 프리미엄 브랜드(Duvetica, Supra, Sergio Tacchini)에 맞는 상품상세 UI/UX를 재설계하고 구현했습니다.",
         "멀티 브랜드 구조에서 공통 로직을 유지하면서도 고급 브랜드에 적합한 인터랙션과 디자인 시스템을 확장 적용했습니다."
