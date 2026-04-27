@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio — Creative Developer",
-  description: "심플하고 트렌디한 포트폴리오. 다크 모드와 반응형 레이아웃을 지원합니다.",
+  title: "Portfolio — Frontend Engineer",
+  description: " 복잡한 이커머스 구조를 설계하고 문제를 해결해 사용자 경험으로 연결합니다.",
 };
 
 const themeInitScript = `
