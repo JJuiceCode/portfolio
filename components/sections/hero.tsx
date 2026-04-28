@@ -41,15 +41,23 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
-          <div className="relative aspect-square w-full">
+        <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none rounded-3xl border border-border">
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl">
             <Image
-              src="/hero/jjuice_3d_coding.png"
-              alt="3D 코딩 일러스트"
+              src="/hero/hero_jjuice_light.jpg"
+              alt="JJuice 3D 코딩 일러스트"
               fill
               priority
               sizes="(min-width: 1024px) 32vw, (min-width: 640px) 448px, 100vw"
-              className="object-contain"
+              className="object-contain rounded-3xl dark:hidden"
+            />
+            <Image
+              src="/hero/hero_jjuice_dark.jpg"
+              alt="JJuice 3D 코딩 일러스트"
+              fill
+              priority
+              sizes="(min-width: 1024px) 32vw, (min-width: 640px) 448px, 100vw"
+              className="hidden object-contain rounded-3xl dark:block"
             />
           </div>
         </div>
