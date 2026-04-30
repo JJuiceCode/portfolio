@@ -1,24 +1,35 @@
 "use client";
 
-import { useTheme } from "./theme-provider";
+import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme, mounted } = useTheme();
+  const { theme, systemTheme, setTheme } = useTheme();
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
+  // ❗ 아직 theme가 undefined일 수 있음
+  if (!currentTheme) {
+    return (
+      <button
+        type="button"
+        aria-label="테마 변경"
+        className="relative flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface"
+      >
+        <span className="h-5 w-5 animate-pulse rounded-full bg-zinc-300 dark:bg-zinc-600" />
+      </button>
+    );
+  }
+
+  const isDark = currentTheme === "dark";
 
   return (
     <button
       type="button"
-      onClick={toggleTheme}
-      aria-label={theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"}
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={isDark ? "라이트 모드로 전환" : "다크 모드로 전환"}
       className="relative flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground transition hover:border-accent/40 hover:text-accent"
     >
-      {!mounted ? (
-        <span className="h-5 w-5 animate-pulse rounded-full bg-zinc-300 dark:bg-zinc-600" />
-      ) : theme === "dark" ? (
-        <SunIcon />
-      ) : (
-        <MoonIcon />
-      )}
+      {isDark ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }
