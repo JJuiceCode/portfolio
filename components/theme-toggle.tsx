@@ -1,27 +1,31 @@
 "use client";
 
-import { useTheme } from "./theme-provider";
+import { useEffect, useState } from "react"; // 1. 추가
+import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme, mounted } = useTheme();
+  const { theme, systemTheme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  const isDark = currentTheme === "dark";
 
   return (
     <button
       type="button"
-      onClick={toggleTheme}
-      aria-label={theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"}
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label="테마 변경"
+      // ❗ 하이드레이션 경고를 무시하도록 설정 (속성값 차이 허용)
+      suppressHydrationWarning
       className="relative flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground transition hover:border-accent/40 hover:text-accent"
     >
-      {!mounted ? (
-        <span className="h-5 w-5 animate-pulse rounded-full bg-zinc-300 dark:bg-zinc-600" />
-      ) : theme === "dark" ? (
-        <SunIcon />
-      ) : (
-        <MoonIcon />
-      )}
+      {/* 아이콘 부분만 클라이언트에서 결정되도록 하고, 
+        초기 렌더링 시에는 서버에서 그린 것과 달라도 에러를 내지 않습니다. 
+      */}
+      {currentTheme ? isDark ? <SunIcon /> : <MoonIcon /> : <span className="h-5 w-5 animate-pulse rounded-full bg-zinc-300 dark:bg-zinc-600" />}
     </button>
   );
 }
+
+// SunIcon, MoonIcon 코드는 그대로 유지...
 
 function SunIcon() {
   return (
