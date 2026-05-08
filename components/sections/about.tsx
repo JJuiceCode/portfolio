@@ -8,12 +8,18 @@ export function About() {
         </div>
         <div className="space-y-4 text-muted">
           <div className="space-y-2 leading-relaxed">
-            <p>이커머스 서비스 전반을 경험하며, 단순 UI 구현을 넘어 실제 운영과 연결되는 구조 설계를 중요하게 생각합니다.</p>
+            <p>다양한 웹 서비스 운영 및 프론트엔드 개발 실무를 경험하며 사용자 중심의 UI/UX 개선과 안정적인 서비스 개발에 집중해왔습니다.</p>
             <p>
-              Next.js, React, TypeScript 기반으로 상태 관리와 컴포넌트 구조를 설계하고, 다양한 브랜드 환경에서도 확장 가능한 프론트엔드 개발을
-              지향합니다.
+              React, Next.js 기반의 프로젝트 경험을 바탕으로 유지보수성과 재사용성을 고려한 컴포넌트 설계 및 협업 중심의 개발 프로세스에 익숙합니다.
             </p>
-            <p>또한 AI를 요구사항 정리, 구현 검토, 디버깅까지 활용하며, 최종 판단과 책임은 직접 가져가는 실무 중심 개발자로 성장하고 있습니다.</p>
+            <p>
+              실무에서는 기획·디자인·백엔드 개발자와의 협업을 통해 요구사항을 구체화하고, 서비스 운영 과정에서 발생하는 문제를 빠르게 분석하고
+              해결하는 역할을 수행해왔습니다.
+            </p>
+            <p>
+              새로운 기술과 개발 트렌드에 꾸준히 관심을 가지며, 더 나은 사용자 경험과 효율적인 개발 환경을 만들기 위해 지속적으로 학습하고 성장하고
+              있습니다.
+            </p>
           </div>
           <ul className="flex flex-wrap gap-2 pt-2">
             {["React", "Next.js", "TypeScript", "Redux Toolkit", "SWR", "Axios", "Monorepo", "Tailwind CSS"].map(tag => (
