@@ -13,7 +13,8 @@ export function Hero() {
         <div>
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent  text-center sm:text-left">Frontend Engineer</p>
           <h1 className="break-keep max-w-3xl text-3xl font-semibold text-foreground sm:text-3xl md:text-4xl  ">
-            복잡한 이커머스 구조를 설계하고 <span className="text-accent">문제를 해결해 사용자 경험으로</span> 연결합니다.
+            복잡한 요구사항을 <span className="text-accent">구조화</span> 하고 안정적인 <span className="text-accent">사용자 경험</span>으로
+            연결합니다.
           </h1>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
