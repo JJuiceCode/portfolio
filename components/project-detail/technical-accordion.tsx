@@ -74,7 +74,7 @@ export function TechnicalAccordion({ areas }: TechnicalAccordionProps) {
                       </div>
                       <div>
                         <p className="text-xs font-medium uppercase tracking-wider text-muted">Implementation & history</p>
-                        <ul className="mt-3 space-y-3 text-sm leading-relaxed text-foreground">
+                        <ul className="mt-3 space-y-3 text-sm leading-relaxed text-foreground md:text-base">
                           {area.details.map((paragraph, i) => (
                             <li
                               key={i}

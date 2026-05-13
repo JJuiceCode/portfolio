@@ -12,9 +12,9 @@ export function Hero() {
       <div className="mx-auto grid max-w-5xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.75fr)] lg:gap-10 text-center sm:text-left">
         <div>
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent  text-center sm:text-left">Frontend Engineer</p>
-          <h1 className="break-keep max-w-3xl text-3xl font-semibold text-foreground sm:text-3xl md:text-4xl  ">
-            복잡한 요구사항을 <span className="text-accent">구조화</span> 하고 안정적인 <span className="text-accent">사용자 경험</span>으로
-            연결합니다.
+          <h1 className="break-keep max-w-3xl text-3xl font-semibold text-foreground sm:text-3xl md:text-4xl leading-tight">
+            복잡한 커머스 요구사항을 <span className="text-accent">구조화</span>하고 <span className="text-accent">운영 가능한</span> 프론트엔드
+            시스템으로 구현합니다.
           </h1>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
